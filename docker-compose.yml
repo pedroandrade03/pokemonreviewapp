@@ -1,12 +1,4 @@
-﻿services:
-  pokemonreviewapp:
-    image: pokemonreviewapp
-    build:
-      context: .
-      dockerfile: PokemonReviewApp/Dockerfile
-    ports:
-        - "8080:80"
-      
+﻿services:      
   db:
     image: postgres:latest
     restart: always
@@ -18,4 +10,3 @@
       - ./data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-
