@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-            dockerapp = docker.build("pokemonapp", "-f ./PokemonReviewApp/Dockerfile ./PokemonReviewApp")
+            dockerapp = docker.build("pedroandrade03/pokemonreviewapp", '-f ./PokemonReviewApp/Dockerfile ./PokemonReviewApp')
         }
       }
     }
